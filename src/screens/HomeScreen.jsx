@@ -17,6 +17,14 @@ const HomeScreen = () => {
     getRecipes();
   
   }, [])
+
+  const handlechangeCategory=category=>{
+    setRecipes([])
+    getRecipes(category);
+    setActiveCategory(category);
+   
+
+  }
   
 
   const getCategory=async()=>{
@@ -30,8 +38,8 @@ const HomeScreen = () => {
 
   }
 
-  const getRecipes=async()=>{
-    const response=await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${activeCategory}`);
+  const getRecipes=async(cat="beef")=>{
+    const response=await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat}`);
 
     if(response.status==200){
       setRecipes(response.data.meals)
@@ -85,12 +93,12 @@ const HomeScreen = () => {
 
 
         <View>
-         {categores.length>0&& <Categores data={categores} setActiveCategory={setActiveCategory} activeCategory={activeCategory} />}
+         {categores.length>0&& <Categores data={categores} handlechangeCategory={handlechangeCategory} activeCategory={activeCategory} />}
         </View>
 
 
         <View>
-         <Recipes data={recipes}/>
+         <Recipes data={recipes} cat={categores}/>
         </View>
       </ScrollView>
     </View>
