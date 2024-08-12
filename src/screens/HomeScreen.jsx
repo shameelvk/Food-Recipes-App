@@ -76,7 +76,7 @@ const HomeScreen = () => {
             <Text className="font-semibold text-neutral-600 text-4xl">Make you own food,</Text>
           </View>
           <Text className="font-semibold text-neutral-600 text-4xl">
-            stay at <Text className="font-semibold text-amber-400">home</Text>
+            stay at <Text className="font-semibold text-red-400">home</Text>
           </Text>
 
         </View>

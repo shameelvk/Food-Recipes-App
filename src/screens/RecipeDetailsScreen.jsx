@@ -92,7 +92,7 @@ const RecipeDetailsScreen = (prop) => {
           onPress={() => navigaion.goBack()}
           className="p-2 rounded-full ml-5 bg-white "
         >
-          <ChevronLeftIcon color="#fbbf24" />
+          <ChevronLeftIcon color="#cb202d" />
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -116,7 +116,7 @@ const RecipeDetailsScreen = (prop) => {
             </Animated.View >
 
             <Animated.View entering={FadeInDown.delay(100).duration(700).springify().damping(12)}  className="flex-row justify-around">
-              <View className="flex items-center rounded-full bg-amber-300 p-2">
+              <View className="flex items-center rounded-full bg-red-400 p-2">
                 <View className="bg-white h-12 w-12 rounded-full flex items-center justify-center">
                   <ClockIcon size={30} strokeWidth={2.5} color={"#525252"} />
                 </View>
@@ -127,7 +127,7 @@ const RecipeDetailsScreen = (prop) => {
                   </Text>
                 </View>
               </View>
-              <View className="flex items-center rounded-full bg-amber-300 p-2">
+              <View className="flex items-center rounded-full bg-red-400 p-2">
                 <View className="bg-white h-12 w-12 rounded-full flex items-center justify-center">
                   <UsersIcon size={30} strokeWidth={2.5} color={"#525252"} />
                 </View>
@@ -138,7 +138,7 @@ const RecipeDetailsScreen = (prop) => {
                   </Text>
                 </View>
               </View>
-              <View className="flex items-center rounded-full bg-amber-300 p-2">
+              <View className="flex items-center rounded-full bg-red-400 p-2">
                 <View className="bg-white h-12 w-12 rounded-full flex items-center justify-center">
                   <FireIcon size={30} strokeWidth={2.5} color={"#525252"} />
                 </View>
@@ -151,7 +151,7 @@ const RecipeDetailsScreen = (prop) => {
                   </Text>
                 </View>
               </View>
-              <View className="flex items-center rounded-full bg-amber-300 p-2">
+              <View className="flex items-center rounded-full bg-red-400 p-2">
                 <View className="bg-white h-12 w-12 rounded-full flex items-center justify-center">
                   <Square3Stack3DIcon
                     size={30}
@@ -176,12 +176,12 @@ const RecipeDetailsScreen = (prop) => {
                 {ingrediantIndex(mealData).map((i) => {
                   return (
                     <View key={i} className="space-x-4 flex-row items-center">
-                      <View className="h-4 w-4 bg-amber-300 rounded-full" />
+                      <View className="h-4 w-4 bg-red-400 rounded-full" />
                       <View className="flex-row space-x-2">
                         <Text className="font-extrabold text-neutral-700">
                           {mealData["strMeasure" + i]}
                         </Text>
-                        <Text className="font-medium text-neutral-600">
+                        <Text className="font-medium text-neutral-400">
                           
                           {mealData["strIngredient" + i]}
                         </Text>
@@ -216,7 +216,7 @@ const RecipeDetailsScreen = (prop) => {
             )}
           </View>
         ) : (
-          <ActivityIndicator size={"large"} className="mt-20" />
+          <ActivityIndicator color={"#cb202d"} size={"large"} className="mt-20" />
         )}
       </View>
     </ScrollView>

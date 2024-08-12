@@ -14,7 +14,7 @@ const Categores = ({ data, activeCategory, handlechangeCategory }) => {
         {data.map((value, index) => {
           let isActive = value.strCategory == activeCategory;
 
-          let activeClass = isActive ? " bg-amber-400 " : " bg-black/10 ";
+          let activeClass = isActive ? " bg-red-500 " : " bg-black/10 ";
           return (
             <TouchableOpacity
               onPress={() => handlechangeCategory(value.strCategory)}

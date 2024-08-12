@@ -11,7 +11,7 @@ const Recipes = ({ data ,cat}) => {
     <View className="mx-4 space-y-3">
       <Text className=" font-semibold text-neutral-600 text-xl">Recipes</Text>
       <View>
-       {cat.length==0||data.length==0?<ActivityIndicator size={"large"} className="mt-20"/>: <MasonryList
+       {cat.length==0||data.length==0?<ActivityIndicator color={"#cb202d"} size={"large"} className="mt-20"/>: <MasonryList
           data={data}
           keyExtractor={(item) => item.id}
           numColumns={2}
