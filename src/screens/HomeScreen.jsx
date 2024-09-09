@@ -73,7 +73,7 @@ const HomeScreen = () => {
         <View className="mx-4 space-y-2 mb-2">
           <Text className="text-neutral-400 text-lg">Hello,Shameel</Text>
           <View>
-            <Text className="font-semibold text-neutral-600 text-4xl">Make you own food,</Text>
+            <Text className="font-semibold text-neutral-600 text-4xl">Make your own food,</Text>
           </View>
           <Text className="font-semibold text-neutral-600 text-4xl">
             stay at <Text className="font-semibold text-red-400">home</Text>
